@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ibatorConfiguration PUBLIC "-//Apache Software Foundation//DTD Apache iBATIS Ibator Configuration 1.0//EN"
+        "http://ibatis.apache.org/dtd/ibator-config_1_0.dtd" >
+<ibatorConfiguration>
+    <classPathEntry location="/apache/lib/ojdbc6.jar"/>
+    <ibatorContext id="boss-context" targetRuntime="Ibatis3">
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost/mybatiscli?autoReconnect=true&amp;characterEncoding=UTF-8&amp;useUnicode=true"
+                        userId="root" password="root"/>
+        <javaModelGenerator targetPackage="com.masergy.scc.db" targetProject="isc\src"></javaModelGenerator>
+        <sqlMapGenerator targetPackage="com.masergy.scc.db" targetProject="isc\src"/>
+        <!-- <daoGenerator targetPackage="com.masergy.scc.db" targetProject="isc\src" type="GENERIC-CI" /> -->
+        <table schema="order_entry" tableName="activation_job"/>
+    </ibatorContext>
+</ibatorConfiguration>
